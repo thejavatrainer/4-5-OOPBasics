@@ -8,11 +8,16 @@ import com.frequentis.training.oop.exceptions.IllegalMoveException;
  */
 public abstract class ChessPiece implements Movable {
 
+    static{
+        System.out.println("this will run when the class is loaded by the JVM, before any constructor is called");
+    }
+
     public static int tableSize = 8;
 
     protected final Position position;
 
     protected ChessPiece(Position position){
+        System.out.println("a new ChessPiece is created");
         this.position = position;
     }
 
@@ -23,9 +28,9 @@ public abstract class ChessPiece implements Movable {
     }
 
     public static void main(String[] args) {
-        System.out.println(tableSize);
+       /* System.out.println(tableSize);
         ChessPiece.tableSize = 9;
-        System.out.println(tableSize);
+        System.out.println(tableSize);*/
         new Bishop(null).tableSize = 4;
         System.out.println(tableSize);
     }
