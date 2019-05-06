@@ -13,8 +13,20 @@ public class ChessProgram {
     }
 
     private static void createSomeObjectsAndUseThem() throws IllegalMoveException {
+        try {
+            metod();
+        } catch (IllegalMoveException e) {
+            throw e;
+        } finally {
+
+        }
+    }
+
+    private static void metod() throws IllegalMoveException {
         Bishop bishop = new Bishop(null);
-     //   Bishop secondBishop = new Bishop(null);
+        //   Bishop secondBishop = new Bishop(null);
+
         bishop.move(null);
+        // other stuff
     }
 }

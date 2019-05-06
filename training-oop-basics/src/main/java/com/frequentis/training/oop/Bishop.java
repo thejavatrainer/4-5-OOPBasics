@@ -29,6 +29,7 @@ public final class Bishop extends ChessPiece {
     public void move(int xPos, int yPos){
     }
 
+
     @Override
     public void finalize(){
         System.out.println("this object is distroyed");

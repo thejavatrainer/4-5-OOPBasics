@@ -23,6 +23,10 @@ public abstract class ChessPiece implements Movable {
 
     public abstract void move(Position newPosition) throws IllegalMoveException;
 
+    public final void jump(){
+        System.out.println("jump");
+    }
+
     public Position getPosition(){
         return this.position;
     }
